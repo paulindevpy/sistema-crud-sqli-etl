@@ -52,7 +52,7 @@ Projeto desenvolvido com foco em prática de lógica de programação, banco de 
 ---
 
 ### 🔹 Listagem de produtos
-![Produtos](imgs/LISTARPRODUTOS.png)
+![Produtos](imgs/produtos.png)
 
 ---
 
@@ -62,6 +62,6 @@ Projeto desenvolvido com foco em prática de lógica de programação, banco de 
 ---
 
 ### 🔹 Relatório / Faturamento
-![Relatório](imgs/fatur.relato.png)
+![Relatório](imgs/relatorio.png)
 
 ---
