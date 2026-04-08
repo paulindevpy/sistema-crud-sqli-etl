@@ -50,7 +50,7 @@ while rodando:
 # Cadastro de novo produto no banco de dados
   if opcao == op_cadastro:
     nome = input(Fore.BLUE + "Digite o NOME DO PRODUTO: " + Style.RESET_ALL)
-    preco = int(input(Fore.BLUE + "Digite o PREÇO: " + Style.RESET_ALL))
+    preco =  int(input(Fore.BLUE + "Digite o PREÇO: " + Style.RESET_ALL))
     cursor.execute(         #EXECUTANDO COMANDO SQL
       "INSERT INTO usuarios (nome, preco) VALUES (?, ?)", 
       (nome, preco)
@@ -125,17 +125,22 @@ while rodando:
     # Extração: SELECT no banco
     # Transformação: soma e contagem
     # Carga: exibição no terminal
+
   elif opcao == op_relat:  
     cursor.execute("SELECT * FROM pedidos")
     dados = cursor.fetchall()
-    total_geral = 0
-    contador_pedidos = 0 
-  for pedido in dados: 
-     total_geral += pedido[3]
-     contador_pedidos += 1
-  print(Fore.LIGHTRED_EX + "\n ---- RELATÓRIO ----" + Style.RESET_ALL)
-  print(Fore.LIGHTGREEN_EX + f"Faturamento Total: R${total_geral:.2f}" + Style.RESET_ALL)
-  print(Fore.LIGHTYELLOW_EX + f"Total de Pedidos: {contador_pedidos}" + Style.RESET_ALL)
+    if not dados:
+      print(Fore.RED + "NENHUM PEDIDO AINDA"+ Style.RESET_ALL)
+    else:
+      total_geral = 0
+      contador_pedidos = 0 
+
+    for pedido in dados: 
+        total_geral += pedido[3]
+        contador_pedidos += 1
+    print(Fore.LIGHTRED_EX + "\n ---- RELATÓRIO ----" + Style.RESET_ALL)
+    print(Fore.LIGHTGREEN_EX + f"Faturamento Total: R${total_geral:.2f}" + Style.RESET_ALL)
+    print(Fore.LIGHTYELLOW_EX + f"Total de Pedidos: {contador_pedidos}" + Style.RESET_ALL)
 
 
  
