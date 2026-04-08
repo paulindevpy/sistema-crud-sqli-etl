@@ -38,3 +38,30 @@ Projeto desenvolvido com foco em prática de lógica de programação, banco de 
 - **Extract:** dados coletados do banco SQLite
 - **Transform:** cálculo de faturamento e contagem de pedidos
 - **Load:** exibição no terminal
+
+- ## 📸 Demonstração do sistema
+
+### 🔹 Menu principal
+![Menu](imgs/menuprincipal.png)
+
+---
+
+### 🔹 Cadastro de produto
+![Cadastro](imgs/cadastro.png)
+
+---
+
+### 🔹 Listagem de produtos
+![Produtos](imgs/LISTARPRODUTOS.png)
+
+---
+
+### 🔹 Criação de pedidos
+![Pedidos](imgs/pedidos.png)
+
+---
+
+### 🔹 Relatório / Faturamento
+![Relatório](imgs/fatur.relato.png)
+
+---
